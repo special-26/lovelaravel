@@ -2,16 +2,19 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Filament\Panel;
 use Laravel\Sanctum\HasApiTokens;
 use Laravel\Jetstream\HasProfilePhoto;
 use Firefly\FilamentBlog\Traits\HasBlog;
 use Illuminate\Notifications\Notifiable;
+use Filament\Models\Contracts\FilamentUser;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Laravel\Fortify\TwoFactorAuthenticatable;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class User extends Authenticatable
+class User extends Authenticatable implements FilamentUser
 {
     use HasApiTokens;
     use HasFactory;
@@ -19,6 +22,7 @@ class User extends Authenticatable
     use Notifiable;
     use TwoFactorAuthenticatable;
     use HasBlog;
+    use SoftDeletes;
 
     /**
      * The attributes that are mass assignable.
@@ -61,8 +65,15 @@ class User extends Authenticatable
         'profile_photo_url',
     ];
 
+    public function canAccessPanel(Panel $panel): bool
+    {
+        // return str_ends_with($this->email, '@vimalbharti.com') && $this->hasVerifiedEmail();
+        return $this->email === 'me@vimalbharti.com';
+    }
+
     public function canComment(): bool
     {
         return true;
     }
+
 }

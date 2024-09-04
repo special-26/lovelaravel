@@ -153,7 +153,7 @@
 
         <!-- Footer -->
         <footer class='p-4 shadow hidden md:flex md:items-center md:justify-between md:p-6 bg-white dark:bg-zinc-900 w-full dark:border-zinc-800'>
-            <span class='text-sm text-zinc-500 sm:text-center dark:text-zinc-500'>© 2024 All Rights Reserved.</span>
+            <span class='text-sm text-zinc-500 sm:text-center dark:text-zinc-500'>© 2024 LoveLaravel</span>
             <div class='flex flex-wrap gap-5 items-center justify-between text-sm text-zinc-500 dark:text-zinc-400'>
             <div class="w-full flex items-center gap-1 justify-end">
                 <h4 class="text-xs text-zinc-700 dark:text-zinc-400">Inked By :</h4>
