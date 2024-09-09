@@ -1,8 +1,8 @@
-@props(['title' =>'Firefly Blog', 'logo' => null] )
+{{-- @props(['title' =>'Firefly Blog', 'logo' => null] ) --}}
 <header @click.outside="showSearchModal = false" x-data="{ showSearchModal: false }" class="sticky top-0 z-[94035] mb-4">
     <div class="py-3 shadow-sm">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="flex justify-between gap-x-4">
+        <div class="container mx-auto">
+            <div class="flex justify-between gap-x-4 px-8">
                 <div class="flex items-center gap-x-10">
                     <a aria-current="page" class="flex items-center gap-2" href="/">
                         {{-- <button class="bg-red-600 rounded p-2 flex items-center gap-4">
@@ -16,7 +16,7 @@
                                 <path d="M324 216H216V864H864V324H648V432H756V756H324V216Z" fill="white"/>
                             </svg>
                         </button>
-                        <p class="text-zinc-800 font-bold text-xl">LoveLaravel</p>
+                        <p class="text-zinc-800 text-xl">LoveLaravel</p>
                     </a>
                     <div class="hidden gap-x-10 sm:flex">
                         <a wire:navigate href="{{ route('filamentblog.post.index') }}" class="font-semibold text-md hover:text-primary-600">
@@ -38,7 +38,7 @@
                         </div> --}}
                     </div>
                 </div>
-                <div class="hidden md:flex items-center ml-auto gap-6">
+                <div class="flex items-center ml-auto gap-6">
                     <form action="{{ route('filamentblog.post.search') }}" method="GET">
                         <div class="relative">
                             <div class="relative">

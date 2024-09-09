@@ -1,11 +1,13 @@
 <?php
 
-use App\Livewire\Boilerplate\AllTemplate;
-use App\Livewire\Boilerplate\TemplateShow;
+use App\Models\Activity;
 use App\Models\Template;
+use Illuminate\Support\Facades\Auth;
 use Firefly\FilamentBlog\Models\Post;
 use Illuminate\Support\Facades\Route;
+use App\Livewire\Boilerplate\AllTemplate;
 use Firefly\FilamentBlog\Models\Category;
+use App\Livewire\Boilerplate\TemplateShow;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,7 +33,8 @@ Route::middleware([
     'verified',
 ])->group(function () {
     Route::get('/dashboard', function () {
-        return view('dashboard');
+        $activites = Activity::where('user_id', Auth::user()->id)->get();
+        return view('dashboard', compact('activites'));
     })->name('dashboard');
 });
 Route::get('/templates', AllTemplate::class)->name('all-templates');

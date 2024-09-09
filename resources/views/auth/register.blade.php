@@ -5,9 +5,17 @@
 
         <section class="w-full bg-red-500">
             <a href="/" wire:navigate class="text-white flex items-center justify-center h-full ">
-                <svg class="h-[92%] w-[92%]" viewBox="0 0 462 482" fill="none" xmlns="http://www.w3.org/2000/svg">
+                {{-- <svg class="h-[92%] w-[92%]" viewBox="0 0 462 482" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M14 481.474V14H216.948V355.716H355.716M115.474 105.934V456.322H447.649V255.109H308.882" stroke="currentColor" stroke-width="28"/>
-                </svg>
+                </svg> --}}
+                {{-- <svg class="h-[92%] w-[92%]" viewBox="0 0 864 864" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0V864H108V108H432V648H648V540H540V0H0Z" fill="white"/>
+                    <path d="M324 216H216V864H864V324H648V432H756V756H324V216Z" fill="white"/>
+                </svg> --}}
+                {{-- <video autoplay loop class="h-full w-full">
+                    <source src="/images/logo.webm" type="video/webm" />
+                </video> --}}
+                <img src="/images/logo.webp" alt="" class="w-full h-full">
             </a>
         </section>
 
