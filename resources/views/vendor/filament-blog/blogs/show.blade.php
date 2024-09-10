@@ -60,8 +60,7 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <article class="m-auto leading-6">
-
+                                    <article class="m-auto leading-6 prose prose-sm !max-w-none">
                                         {!! tiptap_converter()->asHTML($post->body, toc: true, maxDepth: 3) !!}
                                     </article>
 
