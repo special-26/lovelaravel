@@ -1,5 +1,5 @@
-@props(['title' =>'Firefly Blog', 'logo' => null] )
-<header @click.outside="showSearchModal = false" x-data="{ showSearchModal: false }" class="sticky top-0 z-[94035] mb-4">
+@props(['title' =>'LoveLaravel', 'logo' => null] )
+<header @click.outside="showSearchModal = false" x-data="{ showSearchModal: false }" class="sticky top-0 z-[94035]">
     <div class="py-3 shadow-sm">
         <div class="max-w-7xl mx-auto px-4">
             <div class="flex justify-between gap-x-4">
@@ -115,7 +115,7 @@
                             </div>
                         @else
                             <div class="flex items-center">
-                                <a href="{{ route('login') }}" wire:navigate class="text-sm text-gray-700 dark:text">Login</a>
+                                <a href="{{ route('login') }}" wire:navigate class="text-sm text-gray-700 dark:text">My Account</a>
                             </div>
                         @endauth
                     </div>

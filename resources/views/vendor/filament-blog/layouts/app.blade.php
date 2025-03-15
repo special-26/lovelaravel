@@ -168,7 +168,7 @@
 <body class="antialiased">
     <div class="min-h-screen">
         <!-- Page Header -->
-        <x-blog-header title="{{ $setting?->title }}" logo="{{ $setting?->logoImage }}" />
+        {{-- <x-blog-header title="{{ $setting?->title }}" logo="{{ $setting?->logoImage }}" /> --}}
         <!-- Page Content -->
         <main>
             {{ $slot }}

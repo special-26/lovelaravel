@@ -1,4 +1,4 @@
-<x-blog-layout>
+<x-app-layout>
     <section>
         <header class="container mx-auto mb-4 max-w-[800px] px-6 pb-4 mt-10 text-center">
             <p class="inherits-color text-balance leading-tighter relative z-10 text-3xl font-semibold tracking-tight">
@@ -23,4 +23,4 @@
         </div>
     </section>
 
-</x-blog-layout>
+</x-app-layout>

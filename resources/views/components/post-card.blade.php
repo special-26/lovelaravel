@@ -1,6 +1,6 @@
 @props(['post'])
 <a class="group flex flex-col rounded-xl hover:shadow-xl" href="{{ route('filamentblog.post.show', ['post' => $post->slug]) }}">
-    <div class="flex-shrink-0 relative rounded-xl overflow-hidden h-[300px] w-full">
+    <div class="flex-shrink-0 relative rounded-xl overflow-hidden h-[200px] w-full">
         <img class="size-full absolute top-0 start-0 object-cover group-hover:scale-110 transition duration-700 ease-in-out" src="{{ Storage::url($post->cover_photo_path) }}" alt="{{ $post->photo_alt_text }}" alt="Image Description">
     </div>
     <div class="grow">
@@ -19,8 +19,7 @@
                 {{ Str::limit($post->sub_title, 100) }}
             </p>
 
-            <div class="mt-5 sm:mt-auto">
-                <!-- Avatar -->
+            {{-- <div class="mt-5 sm:mt-auto">
                 <div class="flex items-center">
                     <div class="flex-shrink-0">
                         <img class="size-[32px] rounded-full" src="{{ $post->user->avatar }}" alt="{{ $post->user->name() }}">
@@ -34,8 +33,7 @@
                     </p>
                     </div>
                 </div>
-                <!-- End Avatar -->
-            </div>
+            </div> --}}
         </div>
     </div>
 </a>
